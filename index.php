@@ -11,7 +11,8 @@
     </h1>
     <form action="./server.php" type="GET">
         <textarea name="text" id="text" cols="30" rows="10" placeholder="Insert the text"></textarea>
-        
+        <input type="text" name="censor-text" id="censor-text" placeholder="Insert the censor text">
+        <button type="sub">Confirm</button>
     </form>
 </body>
 </html>
