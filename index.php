@@ -9,10 +9,10 @@
     <h1>
         Php Badwords
     </h1>
-    <form action="./server.php" type="GET">
-        <textarea name="text" id="text" cols="30" rows="10" placeholder="Insert the text"></textarea>
-        <input type="text" name="censor_text" id="censor-text" placeholder="Insert the censor text">
-        <button type="sub">Confirm</button>
+    <form action="./server.php" method="GET">
+        <input type="text" name="text" id="text" placeholder="Insert the text">
+        <input type="text" name="censor_text" id="censor_text" placeholder="Insert the censor text">
+        <button type="submit">Send</button>
     </form>
 </body>
 </html>

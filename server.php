@@ -1,6 +1,7 @@
 <?php 
     $text = $_GET['text'];
-    $word = $_GET['censor_text']
+    $censor = $_GET['censor_text'];
+    $censoredWord = ("***");
 ?>
 
 <!DOCTYPE html>
@@ -13,17 +14,20 @@
 <body>
     <h1>PHP Badwords</h1>
 
-    <h2>Paragrafo inserito e sua lunghezza:</h2>
-    <span>
-    <?php
-        echo $text . " " . strlen($text);
-    ?>
-    </span>
+    <h2>
+        The insert text is: <br>
+        <?php echo $text?> <br>
+        whit length <?php echo strlen($text)?>
+    </h2>
+    
 
-    <h2>Paragrafo inserito (con parola scelta censurata) e sua lunghezza:</h2>
+    <h2>
+        You write a censor word
+    </h2>
     <span>
     <?php
-        echo str_replace($word, '***', $text) . " " . strlen($text);
+        $newWord = str_replace($censor, $censoredWord, $text);
+            echo $newWord. " " . strlen($newWord);
     ?>
     </span>
 </body>
