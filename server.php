@@ -14,21 +14,24 @@
 <body>
     <h1>PHP Badwords</h1>
 
-    <h2>
+    <h3>
         The insert text is: <br>
         <?php echo $text?> <br>
         whit length <?php echo strlen($text)?>
-    </h2>
+    </h3>
     
 
     <h2>
         You write a censor word
     </h2>
     <span>
-    <?php
-        $newWord = str_replace($censor, $censoredWord, $text);
-            echo $newWord. " " . strlen($newWord);
-    ?>
+        <h3>
+            <?php
+                echo $censoredWord. " ";
+                $newWord = str_replace($censor, $censoredWord, $text);
+                    echo $newWord. " whit length " . strlen($newWord);
+            ?>
+        </h3>
     </span>
 </body>
 </html>
