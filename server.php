@@ -1,7 +1,6 @@
 <?php 
     $text = $_GET['text'];
     $censor = $_GET['censor_text'];
-    $censoredWord = ("***");
 ?>
 
 <!DOCTYPE html>
@@ -28,8 +27,7 @@
     <span>
         <h3>
             <?php
-                echo $censoredWord. " ";
-                $newWord = str_replace($censor, $censoredWord, $text);
+                $newWord = str_replace($censor, '###' , $text);
                     echo $newWord. " whit length " . strlen($newWord);
             ?>
         </h3>
